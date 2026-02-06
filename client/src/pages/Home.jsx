@@ -138,7 +138,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Feature Grid with Redirects */}
       <section className="relative max-w-7xl mx-auto w-full px-6 pb-20 z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard 
@@ -158,7 +157,7 @@ export default function Home() {
           <FeatureCard 
             icon="🚀" 
             title="Hostinger" 
-            desc="Fast, reliable deployment on premium VPS hosting for maximum stability." 
+            desc="Fast, reliable deployment with web hosting for cost-efficiency and stability." 
             border="hover:border-purple-500" 
             href="https://www.hostinger.com"
           />
