@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const CreateEmployee = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    // 1. Initialize as empty strings so the placeholder is selected
     const [role, setRole] = useState('');
     const [department, setDepartment] = useState(''); 
     const navigate = useNavigate();
@@ -13,7 +14,6 @@ const CreateEmployee = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // 2. Simple validation to ensure they didn't leave it on "Select..."
         if (!role || !department) {
             alert("Please select both a Department and a Role.");
             return;
@@ -87,7 +87,6 @@ const CreateEmployee = () => {
                                     onChange={(e) => setDepartment(e.target.value)}
                                     required
                                 >
-                                    {/* 3. Add a disabled placeholder option */}
                                     <option value="" disabled>Select Department</option>
                                     <option value="Engineering">Engineering</option>
                                     <option value="Marketing">Marketing</option>
@@ -105,7 +104,6 @@ const CreateEmployee = () => {
                                     onChange={(e) => setRole(e.target.value)}
                                     required
                                 >
-                                    {/* 4. Add a disabled placeholder option */}
                                     <option value="" disabled>Select Role</option>
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
