@@ -13,6 +13,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Employee Management API is running'
+  });
+});
+
 app.use('/api/auth', authRoutes);          
 app.use('/api/employees', employeeRoutes);
 
