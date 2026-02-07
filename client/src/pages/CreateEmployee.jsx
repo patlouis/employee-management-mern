@@ -19,7 +19,7 @@ const CreateEmployee = () => {
             return;
         }
         
-        axios.post('http://localhost:3000/api/employees', { 
+        axios.post(`${API_URL}/api/employees`, { 
             name, 
             email, 
             role, 
